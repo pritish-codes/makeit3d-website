@@ -19,20 +19,12 @@ export function Navbar({ onServicesClick }: NavbarProps) {
     }
   };
 
-  const headerLogo = (
-    <div className="flex items-center space-x-2">
-      <img 
-        src="/logo.png" 
-        alt="MakeIt3D Logo" 
-        className="h-12 w-auto"
-      />
-    </div>
-  );
-
   return (
     <nav className="relative z-50 container mx-auto px-6 py-6">
       <div className="flex items-center justify-between">
-        <Link to="/">{headerLogo}</Link>
+        <Link to="/" className="text-2xl font-bold text-primary">
+          MakeIt3D
+        </Link>
         <div className="hidden md:flex space-x-8">
           <button onClick={handleServicesClick} className="text-primary hover:text-gold transition">Services</button>
           <Link to="/about" className="text-primary hover:text-gold transition">About</Link>

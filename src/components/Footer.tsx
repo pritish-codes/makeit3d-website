@@ -16,22 +16,14 @@ export function Footer() {
     }
   };
 
-  const footerLogo = (
-    <div className="flex items-center space-x-2 mb-6 md:mb-0">
-      <img 
-        src="/logo.png" 
-        alt="MakeIt3D Logo" 
-        className="h-12 w-auto"
-      />
-    </div>
-  );
-
   return (
     <footer className="bg-accent text-primary py-12">
       <div className="container mx-auto px-6">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <Link to="/">{footerLogo}</Link>
+            <Link to="/" className="text-2xl font-bold text-primary mb-6 block">
+              MakeIt3D
+            </Link>
             <p className="mt-4 text-secondary">
               Bringing your ideas to life through innovative 3D printing solutions.
             </p>
