@@ -2,8 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html, body {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+  }
+}
+
 @layer components {
   .container {
-    @apply max-w-[1400px] mx-auto px-6 lg:px-12;
+    @apply max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12;
   }
 }

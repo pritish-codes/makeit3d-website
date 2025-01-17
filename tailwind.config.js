@@ -4,7 +4,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        customPurple: '#441752',
+        primary: '#FFFFFF',
+        secondary: '#F5F5F5',
+        accent: '#1D3557',
+        text: '#333333',
+        gold: '#FFC107',
       },
       container: {
         center: true,

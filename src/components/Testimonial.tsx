@@ -46,7 +46,7 @@ export function TestimonialSlider() {
   return (
     <section className="relative py-24 overflow-hidden">
       {/* Background gradient and effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+      <div className="absolute inset-0 bg-gradient-to-br from-accent via-accent/80 to-accent/60">
         <motion.div
           className="absolute inset-0"
           animate={{
@@ -59,23 +59,23 @@ export function TestimonialSlider() {
             ease: "linear",
           }}
         >
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/20 rounded-full blur-[120px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold/20 rounded-full blur-[120px]" />
         </motion.div>
       </div>
 
-      <div className="relative container mx-auto px-6">
+      <div className="relative container mx-auto px-4 sm:px-6">
         {/* Section Title */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
               What Our Clients Say
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <p className="text-secondary max-w-2xl mx-auto">
               Hear from businesses and individuals who have transformed their ideas into reality with our 3D printing services.
             </p>
           </motion.div>
@@ -83,19 +83,19 @@ export function TestimonialSlider() {
 
         {/* Testimonial Card */}
         <div className="max-w-4xl mx-auto">
-          <div className="relative bg-white/5 backdrop-blur-lg rounded-2xl p-8 md:p-12">
+          <div className="relative bg-primary/5 backdrop-blur-lg rounded-2xl p-6 md:p-8 lg:p-12">
             <div className="absolute -inset-1">
-              <div className="w-full h-full rotate-180 opacity-30 bg-gradient-to-r from-purple-500/30 via-transparent to-transparent rounded-2xl blur" />
+              <div className="w-full h-full rotate-180 opacity-30 bg-gradient-to-r from-gold/30 via-transparent to-transparent rounded-2xl blur" />
             </div>
 
             {/* Content Container */}
             <div className="relative">
               {/* Quote Icon */}
-              <Quote className="h-12 w-12 text-purple-400/50 mb-6" />
+              <Quote className="h-8 w-8 md:h-12 md:w-12 text-gold/50 mb-4 md:mb-6" />
               
-              {/* Main Content Area - Fixed Height */}
-              <div className="h-[300px] mb-8">
-                <div className="grid md:grid-cols-[auto,1fr] gap-8 items-start">
+              {/* Main Content Area with Fixed Height */}
+              <div className="min-h-[280px] md:min-h-[220px] mb-6">
+                <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start">
                   {/* Image */}
                   <AnimatePresence mode="wait">
                     <motion.div
@@ -104,19 +104,19 @@ export function TestimonialSlider() {
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0.8 }}
                       transition={{ duration: 0.5 }}
-                      className="relative"
+                      className="relative shrink-0"
                     >
-                      <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full blur-xl" />
+                      <div className="absolute -inset-4 bg-gradient-to-r from-gold/20 to-primary/20 rounded-full blur-xl" />
                       <img
                         src={testimonials[currentIndex].image}
                         alt={testimonials[currentIndex].name}
-                        className="relative w-24 h-24 md:w-32 md:h-32 rounded-full object-cover ring-2 ring-purple-500/20"
+                        className="relative w-20 h-20 md:w-32 md:h-32 rounded-full object-cover ring-2 ring-gold/20"
                       />
                     </motion.div>
                   </AnimatePresence>
 
                   {/* Text Content */}
-                  <div className="flex flex-col">
+                  <div className="flex flex-col flex-1 text-center md:text-left">
                     <AnimatePresence mode="wait">
                       <motion.div
                         key={`content-${currentIndex}`}
@@ -124,15 +124,16 @@ export function TestimonialSlider() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.5 }}
+                        className="h-full flex flex-col"
                       >
-                        <blockquote className="text-gray-300 text-lg md:text-xl leading-relaxed mb-6">
+                        <blockquote className="text-secondary text-base md:text-lg lg:text-xl leading-relaxed mb-4 md:mb-6">
                           "{testimonials[currentIndex].quote}"
                         </blockquote>
-                        <div>
-                          <p className="text-white font-semibold text-lg">
+                        <div className="mt-auto">
+                          <p className="text-primary font-semibold text-lg">
                             {testimonials[currentIndex].name}
                           </p>
-                          <p className="text-purple-400">
+                          <p className="text-gold">
                             {testimonials[currentIndex].title}
                           </p>
                         </div>
@@ -143,12 +144,12 @@ export function TestimonialSlider() {
               </div>
 
               {/* Navigation Buttons */}
-              <div className="flex justify-center space-x-4 pt-4 border-t border-white/10">
+              <div className="flex justify-center space-x-4 pt-4 border-t border-primary/10">
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={handlePrev}
-                  className="p-2 rounded-full bg-purple-500/10 hover:bg-purple-500/20 text-purple-400 transition-colors"
+                  className="p-2 rounded-full bg-gold/10 hover:bg-gold/20 text-gold transition-colors"
                 >
                   <ChevronLeft className="h-6 w-6" />
                 </motion.button>
@@ -156,7 +157,7 @@ export function TestimonialSlider() {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={handleNext}
-                  className="p-2 rounded-full bg-purple-500/10 hover:bg-purple-500/20 text-purple-400 transition-colors"
+                  className="p-2 rounded-full bg-gold/10 hover:bg-gold/20 text-gold transition-colors"
                 >
                   <ChevronRight className="h-6 w-6" />
                 </motion.button>

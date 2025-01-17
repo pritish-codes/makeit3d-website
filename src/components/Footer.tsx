@@ -1,59 +1,74 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Printer, Twitter, Instagram, Facebook, Linkedin } from 'lucide-react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Twitter, Instagram, Facebook, Linkedin } from 'lucide-react';
 
 export function Footer() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleServicesClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (location.pathname === '/') {
+      const servicesSection = document.querySelector('#services');
+      servicesSection?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate('/', { state: { scrollToServices: true } });
+    }
+  };
+
   const footerLogo = (
     <div className="flex items-center space-x-2 mb-6 md:mb-0">
-      <Printer className="h-8 w-8 text-purple-500" />
-      <span className="text-2xl font-bold">MakeIt3D</span>
+      <img 
+        src="/logo.png" 
+        alt="MakeIt3D Logo" 
+        className="h-12 w-auto"
+      />
     </div>
   );
 
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-accent text-primary py-12">
       <div className="container mx-auto px-6">
-        {/* Grid layout: 4 balanced columns */}
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Brand / Intro */}
           <div>
             <Link to="/">{footerLogo}</Link>
-            <p className="mt-4 text-gray-400">
+            <p className="mt-4 text-secondary">
               Bringing your ideas to life through innovative 3D printing solutions.
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-purple-400">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4 text-gold">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/#services" className="text-gray-400 hover:text-purple-400 transition">
+                <button
+                  onClick={handleServicesClick}
+                  className="text-secondary hover:text-gold transition"
+                >
                   Services
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/about" className="text-gray-400 hover:text-purple-400 transition">
+                <Link to="/about" className="text-secondary hover:text-gold transition">
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/portfolio" className="text-gray-400 hover:text-purple-400 transition">
+                <Link to="/portfolio" className="text-secondary hover:text-gold transition">
                   Portfolio
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-400 hover:text-purple-400 transition">
+                <Link to="/contact" className="text-secondary hover:text-gold transition">
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Contact Information */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-purple-400">Contact</h4>
-            <ul className="space-y-2 text-gray-400">
+            <h4 className="text-lg font-semibold mb-4 text-gold">Contact</h4>
+            <ul className="space-y-2 text-secondary">
               <li>makeit3d9212@gmail.com</li>
               <li>+91 9591244280</li>
               <li>
@@ -64,14 +79,13 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Policies and Social Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-purple-400">Policies</h4>
+            <h4 className="text-lg font-semibold mb-4 text-gold">Policies</h4>
             <ul className="space-y-2 mb-6">
               <li>
                 <Link
                   to="/privacy-policy"
-                  className="text-gray-400 hover:text-purple-400 transition"
+                  className="text-secondary hover:text-gold transition"
                 >
                   Privacy Policy
                 </Link>
@@ -79,7 +93,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/terms-conditions"
-                  className="text-gray-400 hover:text-purple-400 transition"
+                  className="text-secondary hover:text-gold transition"
                 >
                   Terms &amp; Conditions
                 </Link>
@@ -87,38 +101,38 @@ export function Footer() {
               <li>
                 <Link
                   to="/refund-policy"
-                  className="text-gray-400 hover:text-purple-400 transition"
+                  className="text-secondary hover:text-gold transition"
                 >
                   Refund/Return Policy
                 </Link>
               </li>
             </ul>
-            <h4 className="text-lg font-semibold mb-4 text-purple-400">Follow Us</h4>
+            <h4 className="text-lg font-semibold mb-4 text-gold">Follow Us</h4>
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="text-gray-400 hover:text-purple-400 transition"
+                className="text-secondary hover:text-gold transition"
                 aria-label="Twitter"
               >
                 <Twitter className="h-5 w-5" />
               </a>
               <a
                 href="https://www.instagram.com/make_it3d/"
-                className="text-gray-400 hover:text-purple-400 transition"
+                className="text-secondary hover:text-gold transition"
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-purple-400 transition"
+                className="text-secondary hover:text-gold transition"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-purple-400 transition"
+                className="text-secondary hover:text-gold transition"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
@@ -127,8 +141,7 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Footer Bottom */}
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+        <div className="border-t border-accent/20 mt-12 pt-8 text-center text-secondary">
           <p>© 2024 MakeIt3D. All rights reserved.</p>
         </div>
       </div>

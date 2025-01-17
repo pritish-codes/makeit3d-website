@@ -6,7 +6,6 @@ import { Footer } from '../components/Footer';
 
 export function Contact() {
   useEffect(() => {
-    // Scroll to top when component mounts
     window.scrollTo(0, 0);
   }, []);
 
@@ -59,9 +58,9 @@ export function Contact() {
       exit={{ opacity: 0 }}
     >
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden">
+      <div className="relative bg-gradient-to-br from-accent via-accent/80 to-accent/60 overflow-hidden">
         <Navbar />
-        {/* Animated background elements */}
+        {/* Animated background */}
         <motion.div 
           className="absolute inset-0 overflow-hidden"
           animate={{ 
@@ -75,9 +74,9 @@ export function Contact() {
           }}
         >
           <div className="absolute -inset-[10px] opacity-50">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-500/30 rounded-full blur-[100px]" />
-            <div className="absolute top-1/4 right-1/4 w-[300px] h-[300px] bg-blue-500/20 rounded-full blur-[80px]" />
-            <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-indigo-500/20 rounded-full blur-[90px]" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gold/30 rounded-full blur-[100px]" />
+            <div className="absolute top-1/4 right-1/4 w-[300px] h-[300px] bg-primary/20 rounded-full blur-[80px]" />
+            <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-secondary/20 rounded-full blur-[90px]" />
           </div>
         </motion.div>
         <motion.div 
@@ -87,7 +86,7 @@ export function Contact() {
           transition={{ duration: 0.6 }}
         >
           <motion.h1 
-            className="text-4xl md:text-5xl font-bold text-white mb-6"
+            className="text-4xl md:text-5xl font-bold text-primary mb-6"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
@@ -95,7 +94,7 @@ export function Contact() {
             Contact Us
           </motion.h1>
           <motion.p 
-            className="text-xl text-gray-300 max-w-3xl"
+            className="text-xl text-secondary max-w-3xl"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3 }}
@@ -106,7 +105,7 @@ export function Contact() {
       </div>
 
       {/* Contact Form Section */}
-      <section className="py-24 bg-white relative">
+      <section className="py-24 bg-primary relative">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Information */}
@@ -116,13 +115,13 @@ export function Contact() {
               animate="visible"
             >
               <motion.h2 
-                className="text-3xl font-bold mb-8"
+                className="text-3xl font-bold mb-8 text-text"
                 variants={itemVariants}
               >
                 Get in Touch
               </motion.h2>
               <motion.p 
-                className="text-gray-600 mb-12"
+                className="text-text/80 mb-12"
                 variants={itemVariants}
               >
                 Have questions about our services or want to start a project? Fill out the form and we'll get back to you as soon as possible.
@@ -134,12 +133,12 @@ export function Contact() {
                   variants={itemVariants}
                   whileHover={{ scale: 1.05 }}
                 >
-                  <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
-                    <Phone className="h-6 w-6 text-purple-600" />
+                  <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center">
+                    <Phone className="h-6 w-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Phone</h3>
-                    <p className="text-gray-600">+91 9591244280</p>
+                    <h3 className="font-semibold text-text">Phone</h3>
+                    <p className="text-text/70">+91 9591244280</p>
                   </div>
                 </motion.div>
 
@@ -148,12 +147,12 @@ export function Contact() {
                   variants={itemVariants}
                   whileHover={{ scale: 1.05 }}
                 >
-                  <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
-                    <Mail className="h-6 w-6 text-purple-600" />
+                  <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center">
+                    <Mail className="h-6 w-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Email</h3>
-                    <p className="text-gray-600">makeit3d9212@gmail.com</p>
+                    <h3 className="font-semibold text-text">Email</h3>
+                    <p className="text-text/70">makeit3d9212@gmail.com</p>
                   </div>
                 </motion.div>
 
@@ -162,12 +161,12 @@ export function Contact() {
                   variants={itemVariants}
                   whileHover={{ scale: 1.05 }}
                 >
-                  <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
-                    <MapPin className="h-6 w-6 text-purple-600" />
+                  <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center">
+                    <MapPin className="h-6 w-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Address</h3>
-                    <p className="text-gray-600">39, 3rd Cross Road,Bengaluru</p>
+                    <h3 className="font-semibold text-text">Address</h3>
+                    <p className="text-text/70">39, 3rd Cross Road, Bengaluru</p>
                   </div>
                 </motion.div>
               </div>
@@ -175,7 +174,7 @@ export function Contact() {
 
             {/* Contact Form */}
             <motion.div 
-              className="bg-white rounded-2xl p-8 shadow-xl"
+              className="bg-primary rounded-2xl p-8 shadow-xl border border-text/10"
               variants={formVariants}
               initial="hidden"
               animate="visible"
@@ -183,73 +182,73 @@ export function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-2 gap-6">
                   <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                    <label htmlFor="firstName" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="firstName" className="block text-sm font-semibold text-text mb-2">
                       First Name
                     </label>
                     <input
                       type="text"
                       id="firstName"
                       placeholder="John"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-shadow"
+                      className="w-full px-4 py-3 rounded-lg border border-text/20 bg-secondary focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
                       required
                     />
                   </motion.div>
                   <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                    <label htmlFor="lastName" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="lastName" className="block text-sm font-semibold text-text mb-2">
                       Last Name
                     </label>
                     <input
                       type="text"
                       id="lastName"
                       placeholder="Doe"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-shadow"
+                      className="w-full px-4 py-3 rounded-lg border border-text/20 bg-secondary focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
                       required
                     />
                   </motion.div>
                 </div>
 
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                  <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-semibold text-text mb-2">
                     Email
                   </label>
                   <input
                     type="email"
                     id="email"
                     placeholder="john@example.com"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-shadow"
+                    className="w-full px-4 py-3 rounded-lg border border-text/20 bg-secondary focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
                     required
                   />
                 </motion.div>
 
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                  <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="subject" className="block text-sm font-semibold text-text mb-2">
                     Subject
                   </label>
                   <input
                     type="text"
                     id="subject"
                     placeholder="How can we help?"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-shadow"
+                    className="w-full px-4 py-3 rounded-lg border border-text/20 bg-secondary focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
                     required
                   />
                 </motion.div>
 
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                  <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-semibold text-text mb-2">
                     Message
                   </label>
                   <textarea
                     id="message"
                     rows={6}
                     placeholder="Tell us about your project..."
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-shadow resize-none"
+                    className="w-full px-4 py-3 rounded-lg border border-text/20 bg-secondary focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow resize-none"
                     required
                   />
                 </motion.div>
 
                 <motion.button
                   type="submit"
-                  className="w-full px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 flex items-center justify-center space-x-2 text-lg font-semibold"
+                  className="w-full px-8 py-4 bg-gold text-accent rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-gold/25 flex items-center justify-center space-x-2 text-lg font-semibold"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
