@@ -34,13 +34,13 @@ export function Home() {
       icon: Factory,
       title: 'SLA 3D Printing',
       description: 'We provide high-precision SLA 3D printing, offering detailed prototypes, smooth finishes, and versatile applications with speed, customization, and exceptional quality for every project.',
-      link: '/services/small-batch-manufacturing'
+      link: '/services/sla'
     },
     {
       icon: Wrench,
       title: 'Reverse Engineering Services',
       description: 'We provide expert reverse engineering services, recreating, analyzing, and enhancing designs with cutting-edge 3D scanning, CAD tools, and tailored solutions for diverse industries.',
-      link: '/services/design-assistance'
+      link: '/services/reverse-engineering'
     },
     {
       icon: Package,
@@ -132,7 +132,7 @@ export function Home() {
       </header>
 
       {/* Services Section */}
-      <section id="services" className="py-24 bg-primary relative overflow-hidden">
+      <section id="services" className="py-12 bg-primary relative overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl font-bold mb-6 text-text">Our Services</h2>

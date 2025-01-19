@@ -31,7 +31,7 @@ const portfolioItems: PortfolioItem[] = [
     title: "PCB Enclosure",
     category: "Industrial",
     description: "Custom PCB enclosures with IP65 protection for reliable and secure applications",
-    image: "https://images.unsplash.com/photo-1611078489935-0cb964de46d6?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1974",
+    image: "/portfolio/1.jpeg",
     icon: "Shield"
   },
   {
@@ -39,7 +39,7 @@ const portfolioItems: PortfolioItem[] = [
     title: "Bag Strap Hooks",
     category: "Consumer Products",
     description: "3D-printed bag strap hooks manufactured for a leading bag manufacturing company",
-    image: "https://images.unsplash.com/photo-1547949003-9792a18a2601?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2070",
+    image: "/portfolio/2.jpeg",
     icon: "Backpack"
   },
   {
@@ -47,7 +47,7 @@ const portfolioItems: PortfolioItem[] = [
     title: "Bionic Hand",
     category: "Research",
     description: "3D-printed bionic hand and arm created for an innovative college research project",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2070",
+    image: "/portfolio/3.jpeg",
     icon: "Hand"
   },
   {
@@ -55,7 +55,7 @@ const portfolioItems: PortfolioItem[] = [
     title: "Bag Elements",
     category: "Prototyping",
     description: "3D-printed bag elements for visualization, produced for a bag manufacturing company",
-    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1974",
+    image: "/portfolio/4.jpeg",
     icon: "Backpack"
   },
   {
@@ -63,7 +63,7 @@ const portfolioItems: PortfolioItem[] = [
     title: "Classroom ID Board",
     category: "Signage",
     description: "Custom-designed and 3D-printed classroom identification board for clear and stylish labelling",
-    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2022",
+    image: "/portfolio/5.jpeg",
     icon: "Monitor"
   },
   {
@@ -71,7 +71,7 @@ const portfolioItems: PortfolioItem[] = [
     title: "Remote Holder",
     category: "Home Solutions",
     description: "Custom-designed and 3D-printed remote holder for convenient organization",
-    image: "https://images.unsplash.com/photo-1593784991095-a205069470b6?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2070",
+    image: "/portfolio/6.jpeg",
     icon: "Monitor"
   },
   {
@@ -79,7 +79,7 @@ const portfolioItems: PortfolioItem[] = [
     title: "Racing Team Keychains",
     category: "Merchandise",
     description: "Vibrant multi-colour 3D-printed keychains created in bulk for a college racing team",
-    image: "https://images.unsplash.com/photo-1581092162384-8987c1d64926?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2070",
+    image: "/portfolio/7.jpeg",
     icon: "Key"
   },
   {
@@ -87,7 +87,7 @@ const portfolioItems: PortfolioItem[] = [
     title: "Raspberry Pi Case",
     category: "Electronics",
     description: "Precision 3D-printed Raspberry Pi enclosure for secure and efficient hardware protection",
-    image: "https://images.unsplash.com/photo-1587302912306-cf1ed9c33146?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2080",
+    image: "/portfolio/8.jpeg",
     icon: "Cpu"
   },
   {
@@ -95,7 +95,7 @@ const portfolioItems: PortfolioItem[] = [
     title: "Pi Cam Housing",
     category: "Electronics",
     description: "Custom 3D-printed Pi Cam enclosure designed for an astronomy enthusiast's projects",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2070",
+    image: "/portfolio/9.jpeg",
     icon: "Cpu"
   },
   {
@@ -103,7 +103,7 @@ const portfolioItems: PortfolioItem[] = [
     title: "Prosthetic Hand",
     category: "Medical",
     description: "Fully functional hand designed and 3D-printed for an innovative tech company",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2070",
+    image: "/portfolio/10.jpeg",
     icon: "Hand"
   },
   {
@@ -111,7 +111,7 @@ const portfolioItems: PortfolioItem[] = [
     title: "Company Logo Display",
     category: "Corporate",
     description: "3D-printed company logo designed as a stylish desk display",
-    image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2070",
+    image: "/portfolio/11.jpeg",
     icon: "Lightbulb"
   }
 ];

@@ -115,7 +115,7 @@ export default function App() {
             } 
           />
           <Route 
-            path="/services/small-batch-manufacturing" 
+            path="/services/sla" 
             element={
               <motion.div
                 initial="initial"
@@ -128,7 +128,7 @@ export default function App() {
             } 
           />
           <Route 
-            path="/services/design-assistance" 
+            path="/services/reverse-engineering" 
             element={
               <motion.div
                 initial="initial"
