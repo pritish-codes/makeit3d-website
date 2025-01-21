@@ -1,17 +1,68 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Navbar } from '../components/Navbar';
 import { Send, Phone, Mail, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Footer } from '../components/Footer';
+import emailjs from '@emailjs/browser';
+import toast, { Toaster } from 'react-hot-toast';
 
 export function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted');
+    setIsSubmitting(true);
+
+    try {
+      const result = await emailjs.send(
+        'service_vut3nw8',
+        'template_8psxr1i',
+        {
+          from_name: `${formData.firstName} ${formData.lastName}`,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_name: 'MakeIt3D Team'
+        },
+        'nnJU7kQ6vA7SYdsy-'
+      );
+
+      if (result.status === 200) {
+        toast.success('Message sent successfully!');
+        // Reset form
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      }
+    } catch (error) {
+      toast.error('Failed to send message. Please try again.');
+      console.error('Error sending email:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const containerVariants = {
@@ -57,20 +108,22 @@ export function Contact() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
+      <Toaster position="top-right" />
+      
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-accent via-accent/80 to-accent/60 overflow-hidden">
         <Navbar />
         {/* Animated background */}
-        <motion.div 
+        <motion.div
           className="absolute inset-0 overflow-hidden"
-          animate={{ 
+          animate={{
             scale: [1, 1.1, 1],
-            rotate: [0, 5, 0]
+            rotate: [0, 5, 0],
           }}
-          transition={{ 
+          transition={{
             duration: 20,
             repeat: Infinity,
-            ease: "linear"
+            ease: "linear",
           }}
         >
           <div className="absolute -inset-[10px] opacity-50">
@@ -79,13 +132,15 @@ export function Contact() {
             <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-secondary/20 rounded-full blur-[90px]" />
           </div>
         </motion.div>
-        <motion.div 
+
+        {/* Hero Content */}
+        <motion.div
           className="relative z-10 container mx-auto px-6 py-24"
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <motion.h1 
+          <motion.h1
             className="text-4xl md:text-5xl font-bold text-primary mb-6"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -93,7 +148,7 @@ export function Contact() {
           >
             Contact Us
           </motion.h1>
-          <motion.p 
+          <motion.p
             className="text-xl text-secondary max-w-3xl"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -188,6 +243,8 @@ export function Contact() {
                     <input
                       type="text"
                       id="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
                       placeholder="John"
                       className="w-full px-4 py-3 rounded-lg border border-text/20 bg-secondary focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
                       required
@@ -200,6 +257,8 @@ export function Contact() {
                     <input
                       type="text"
                       id="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
                       placeholder="Doe"
                       className="w-full px-4 py-3 rounded-lg border border-text/20 bg-secondary focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
                       required
@@ -214,6 +273,8 @@ export function Contact() {
                   <input
                     type="email"
                     id="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="john@example.com"
                     className="w-full px-4 py-3 rounded-lg border border-text/20 bg-secondary focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
                     required
@@ -227,6 +288,8 @@ export function Contact() {
                   <input
                     type="text"
                     id="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
                     placeholder="How can we help?"
                     className="w-full px-4 py-3 rounded-lg border border-text/20 bg-secondary focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
                     required
@@ -239,6 +302,8 @@ export function Contact() {
                   </label>
                   <textarea
                     id="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     rows={6}
                     placeholder="Tell us about your project..."
                     className="w-full px-4 py-3 rounded-lg border border-text/20 bg-secondary focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow resize-none"
@@ -248,11 +313,12 @@ export function Contact() {
 
                 <motion.button
                   type="submit"
-                  className="w-full px-8 py-4 bg-gold text-accent rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-gold/25 flex items-center justify-center space-x-2 text-lg font-semibold"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  disabled={isSubmitting}
+                  className="w-full px-8 py-4 bg-gold text-accent rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-gold/25 flex items-center justify-center space-x-2 text-lg font-semibold disabled:opacity-70 disabled:cursor-not-allowed"
+                  whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
+                  whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
                 >
-                  <span>Send Message</span>
+                  <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
                   <Send className="h-5 w-5" />
                 </motion.button>
               </form>
