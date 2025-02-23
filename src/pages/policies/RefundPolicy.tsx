@@ -40,10 +40,10 @@ export function RefundPolicy() {
             <div className="w-16 h-16 bg-gold/20 backdrop-blur rounded-xl flex items-center justify-center">
               <RefreshCw className="h-8 w-8 text-gold" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-primary">Refund Policy</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-primary">Return and Refund Policy</h1>
           </div>
           <p className="text-xl text-secondary max-w-3xl">
-            Understanding our refund and return process for 3D printing services.
+            Last updated: February 02, 2025
           </p>
         </div>
       </div>
@@ -55,78 +55,92 @@ export function RefundPolicy() {
             <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl border border-accent/5">
               <div className="space-y-12">
                 <section>
-                  <h2 className="text-2xl font-bold text-text mb-6">Overview</h2>
+                  <h2 className="text-2xl font-bold text-text mb-6">Introduction</h2>
                   <p className="text-text/80">
-                    We are committed to ensuring your satisfaction with our 3D printing services.
-                    This policy outlines our procedures for refunds and returns.
+                    Thank you for shopping at Makeit3D. If, for any reason, you are not completely satisfied with a purchase, we invite you to review our policy on refunds and returns.
+                  </p>
+                  <p className="text-text/80">
+                    This Return and Refund Policy has been created with the help of the Return and Refund Policy Generator.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-bold text-text mb-6">Eligibility for Refunds</h2>
-                  <p className="text-text/80 mb-4">
-                    Refunds may be issued in the following cases:
+                  <h2 className="text-2xl font-bold text-text mb-6">Interpretation and Definitions</h2>
+                  <h3 className="text-xl font-semibold text-text mb-4">Interpretation</h3>
+                  <p className="text-text/80">
+                    Words with capitalized initials have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or plural.
                   </p>
+                  <h3 className="text-xl font-semibold text-text mt-6 mb-4">Definitions</h3>
                   <ul className="list-disc list-inside space-y-2 text-text/80 ml-4">
-                    <li>Manufacturing defects or errors on our part</li>
-                    <li>Significant deviation from agreed specifications</li>
-                    <li>Damaged items received during shipping</li>
-                    <li>Order cancellation before production begins</li>
+                    <li><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our") refers to Makeit3D, #83 3rd Cross, Saibanagar, Srirampuram, Bengaluru-560021.</li>
+                    <li><strong>Goods</strong> refer to the items offered for sale on the Service.</li>
+                    <li><strong>Orders</strong> mean a request by You to purchase Goods from Us.</li>
+                    <li><strong>Service</strong> refers to the Website.</li>
+                    <li><strong>Website</strong> refers to Makeit3D, accessible from <a href="https://makeit3d.in" className="text-accent underline">makeit3d.in</a>.</li>
+                    <li><strong>You</strong> means the individual or legal entity accessing or using the Service.</li>
                   </ul>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-bold text-text mb-6">Non-Refundable Items</h2>
-                  <p className="text-text/80 mb-4">
-                    The following are generally non-refundable:
+                  <h2 className="text-2xl font-bold text-text mb-6">Your Order Cancellation Rights</h2>
+                  <p className="text-text/80">
+                    You are entitled to cancel your Order within 7 days without giving any reason.
+                  </p>
+                  <p className="text-text/80">
+                    The deadline for cancelling an Order is 7 days from the date you received the Goods.
+                  </p>
+                  <p className="text-text/80">
+                    To exercise your right of cancellation, inform us via:
                   </p>
                   <ul className="list-disc list-inside space-y-2 text-text/80 ml-4">
-                    <li>Custom-designed items that meet specifications</li>
-                    <li>Items modified or damaged by the customer</li>
-                    <li>Design services already rendered</li>
-                    <li>Shipping and handling fees</li>
+                    <li>Email: <a href="mailto:makeit3d9212@gmail.com" className="text-accent underline">makeit3d9212@gmail.com</a></li>
+                  </ul>
+                  <p className="text-text/80">
+                    We will reimburse you within 14 days of receiving the returned Goods, using the same payment method.
+                  </p>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-bold text-text mb-6">Conditions for Returns</h2>
+                  <p className="text-text/80">For Goods to be eligible for a return:</p>
+                  <ul className="list-disc list-inside space-y-2 text-text/80 ml-4">
+                    <li>The Goods were purchased in the last 7 days.</li>
+                    <li>The Goods are in the original packaging.</li>
+                  </ul>
+                  <p className="text-text/80">The following Goods cannot be returned:</p>
+                  <ul className="list-disc list-inside space-y-2 text-text/80 ml-4">
+                    <li>Custom-made or personalized items.</li>
+                    <li>Goods that deteriorate quickly or are past their expiration date.</li>
+                    <li>Unsealed Goods not suitable for return due to hygiene reasons.</li>
+                    <li>Items inseparably mixed with other products after delivery.</li>
                   </ul>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-bold text-text mb-6">Return Process</h2>
-                  <ol className="list-decimal list-inside space-y-2 text-text/80 ml-4">
-                    <li>Contact our customer service within 7 days of receiving your order</li>
-                    <li>Provide order details and reason for return</li>
-                    <li>Receive return authorization and shipping instructions</li>
-                    <li>Return item in original packaging</li>
-                    <li>Refund will be processed after inspection</li>
-                  </ol>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-bold text-text mb-6">Refund Processing</h2>
-                  <p className="text-text/80 mb-4">
-                    Once approved:
-                  </p>
-                  <ul className="list-disc list-inside space-y-2 text-text/80 ml-4">
-                    <li>Refunds are processed within 5-7 business days</li>
-                    <li>Credit card refunds may take additional 2-5 business days</li>
-                    <li>Store credit is available immediately</li>
-                  </ul>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-bold text-text mb-6">Quality Guarantee</h2>
+                  <h2 className="text-2xl font-bold text-text mb-6">Returning Goods</h2>
                   <p className="text-text/80">
-                    We stand behind the quality of our work. If you're not satisfied with the
-                    quality of your order, please contact us immediately for resolution.
+                    You are responsible for the cost and risk of returning Goods. Return items to:
+                  </p>
+                  <p className="text-text/80 font-semibold">#617/618, 2nd Main, E Block, 2nd Stage, Rajajinagar, Bengaluru-560010</p>
+                  <p className="text-text/80">
+                    We recommend using an insured and trackable mail service.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-bold text-text mb-6">Contact Information</h2>
+                  <h2 className="text-2xl font-bold text-text mb-6">Gifts</h2>
                   <p className="text-text/80">
-                    For refund requests or questions, please contact us at:
-                    <br />
-                    Email: returns@makeit3d.com
-                    <br />
-                    Phone: +1 (555) 123-4567
+                    If Goods were marked as a gift when purchased, you'll receive a gift credit once the returned product is received.
+                  </p>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-bold text-text mb-6">Contact Us</h2>
+                  <p className="text-text/80">
+                    If you have any questions, contact us:
+                  </p>
+                  <p className="text-text/80">
+                    Email: <a href="mailto:makeit3d9212@gmail.com" className="text-accent underline">makeit3d9212@gmail.com</a>
                   </p>
                 </section>
               </div>
@@ -139,3 +153,4 @@ export function RefundPolicy() {
     </motion.div>
   );
 }
+

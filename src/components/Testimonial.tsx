@@ -12,20 +12,20 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     name: 'Karan Prabhu',
-    title: 'Designation',
-    image: 'https://images.unsplash.com/photo-1594737625785-c891b256dd7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+    title: '',
+    image: '/testimonial/karan.jpeg',
     quote: 'I would totally recommend Makeit3D if anyone has requirements for 3D printing and design services. Very efficient, quality and specifications were on point to the spec sheets. They were able to print the complex product samples and deliver it before the deadline.'
   },
   {
-    name: 'Abhishek Kulkarni',
-    title: 'Designation',
-    image: 'https://images.unsplash.com/photo-1595152772835-219674b2a8a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+    name: 'Harish Kumar',
+    title: '',
+    image: '/testimonial/harish.jpeg',
     quote: 'Very happy working with Makeit3D on getting my 3D prints made. They are super responsive and show genuine interest in getting a quality print done.'
   },
   {
-    name: 'Raveena Mittal',
-    title: 'Designation',
-    image: 'https://images.unsplash.com/photo-1593708358799-2d6c5f686733?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+    name: 'Ramya',
+    title: '',
+    image: '/testimonial/ramya.jpeg',
     quote: "Makeit3D surely has a bunch of talent always ready to serve your 3D printing requests with the best quality and finish. I had ordered a couple of gifts items for birthdays and anniversaries and I couldn't be more satisfied."
   }
 ];

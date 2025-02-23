@@ -175,7 +175,7 @@ export function About() {
               <div className="relative mb-6 inline-block">
                 <div className="absolute -inset-4 bg-gradient-to-r from-gold/20 to-primary/20 rounded-full blur-xl" />
                 <img
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a"
+                  src="./founders/naveen.jpeg"
                   alt="Naveen Gururaj - Co-founder"
                   className="relative w-48 h-48 rounded-full object-cover mx-auto"
                 />
@@ -201,7 +201,7 @@ export function About() {
               <div className="relative mb-6 inline-block">
                 <div className="absolute -inset-4 bg-gradient-to-r from-gold/20 to-primary/20 rounded-full blur-xl" />
                 <img
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
+                  src="./founders/harivinay.jpeg"
                   alt="Harivinay"
                   className="relative w-48 h-48 rounded-full object-cover mx-auto"
                 />

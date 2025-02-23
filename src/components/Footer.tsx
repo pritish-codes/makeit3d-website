@@ -74,14 +74,7 @@ export function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-gold">Policies</h4>
             <ul className="space-y-2 mb-6">
-              <li>
-                <Link
-                  to="/privacy-policy"
-                  className="text-secondary hover:text-gold transition"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
+
               <li>
                 <Link
                   to="/terms-conditions"

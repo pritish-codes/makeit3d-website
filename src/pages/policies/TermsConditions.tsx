@@ -43,7 +43,7 @@ export function TermsConditions() {
             <h1 className="text-4xl md:text-5xl font-bold text-primary">Terms & Conditions</h1>
           </div>
           <p className="text-xl text-secondary max-w-3xl">
-            Please read these terms and conditions carefully before using our services.
+            Last updated: January 29, 2025
           </p>
         </div>
       </div>
@@ -54,81 +54,99 @@ export function TermsConditions() {
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl border border-accent/5">
               <div className="space-y-12">
+                
                 <section>
-                  <h2 className="text-2xl font-bold text-text mb-6">1. Acceptance of Terms</h2>
+                  <h2 className="text-2xl font-bold text-text mb-6">Interpretation and Definitions</h2>
+                  <h3 className="text-xl font-semibold text-text mb-4">Interpretation</h3>
                   <p className="text-text/80">
-                    By accessing and using our services, you accept and agree to be bound by these
-                    Terms and Conditions and our Privacy Policy.
+                    Words with capitalized initials have meanings defined under the following conditions.
                   </p>
-                </section>
 
-                <section>
-                  <h2 className="text-2xl font-bold text-text mb-6">2. Services</h2>
-                  <p className="text-text/80 mb-4">
-                    We provide 3D printing services, including but not limited to:
-                  </p>
+                  <h3 className="text-xl font-semibold text-text mt-6 mb-4">Definitions</h3>
                   <ul className="list-disc list-inside space-y-2 text-text/80 ml-4">
-                    <li>Custom prototyping</li>
-                    <li>Small-batch manufacturing</li>
-                    <li>Design assistance</li>
-                    <li>Industrial solutions</li>
-                    <li>Rapid tooling</li>
+                    <li><strong>Affiliate</strong>: An entity that controls, is controlled by, or is under common control with a party.</li>
+                    <li><strong>Country</strong>: Karnataka, India.</li>
+                    <li><strong>Company</strong>: Makeit3D, #39 3rd Cross, Saibabanagar, Srirampuram, Bengaluru-560021.</li>
+                    <li><strong>Device</strong>: Any device that can access the Service, such as a computer, cellphone, or tablet.</li>
+                    <li><strong>Service</strong>: Refers to the Website.</li>
+                    <li><strong>Terms and Conditions</strong>: This agreement that governs the use of the Service.</li>
+                    <li><strong>Website</strong>: Makeit3D, accessible from <a href="https://www.makeit3d.in" className="text-accent underline">www.makeit3d.in</a>.</li>
+                    <li><strong>You</strong>: The individual or legal entity accessing or using the Service.</li>
                   </ul>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-bold text-text mb-6">3. Ordering and Payment</h2>
+                  <h2 className="text-2xl font-bold text-text mb-6">Acknowledgment</h2>
                   <p className="text-text/80">
-                    All orders are subject to acceptance and availability. Prices are subject to
-                    change without notice. Payment must be made in full before order processing
-                    begins.
+                    These Terms govern the use of this Service and establish the agreement between You and the Company. Your access to and use of the Service is conditioned upon acceptance of these Terms.
+                  </p>
+                  <p className="text-text/80">
+                    If You do not agree with any part of these Terms, You may not access the Service.
+                  </p>
+                  <p className="text-text/80">
+                    You represent that you are over 18 years old, as the Company does not permit those under 18 to use the Service.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-bold text-text mb-6">4. Intellectual Property</h2>
+                  <h2 className="text-2xl font-bold text-text mb-6">Links to Other Websites</h2>
                   <p className="text-text/80">
-                    You retain all rights to your designs and intellectual property. By submitting
-                    designs for printing, you warrant that you have the right to use and
-                    reproduce the content.
+                    Our Service may contain links to third-party websites. We have no control over and assume no responsibility for their content, privacy policies, or practices.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-bold text-text mb-6">5. Quality and Warranties</h2>
+                  <h2 className="text-2xl font-bold text-text mb-6">Termination</h2>
                   <p className="text-text/80">
-                    We strive to provide high-quality services but cannot guarantee exact color
-                    matches or specific material properties. All services are provided "as is"
-                    without any warranties.
+                    We may terminate or suspend Your access immediately if You breach these Terms.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-bold text-text mb-6">6. Limitation of Liability</h2>
+                  <h2 className="text-2xl font-bold text-text mb-6">Limitation of Liability</h2>
                   <p className="text-text/80">
-                    We shall not be liable for any indirect, incidental, special, consequential,
-                    or punitive damages resulting from your use of our services.
+                    To the maximum extent permitted by applicable law, the Company shall not be liable for any indirect, incidental, special, or consequential damages arising from Your use of the Service.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-bold text-text mb-6">7. Modifications</h2>
+                  <h2 className="text-2xl font-bold text-text mb-6">"AS IS" and "AS AVAILABLE" Disclaimer</h2>
                   <p className="text-text/80">
-                    We reserve the right to modify these terms at any time. Continued use of our
-                    services constitutes acceptance of modified terms.
+                    The Service is provided "AS IS" and "AS AVAILABLE" without warranties of any kind.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-bold text-text mb-6">Contact Information</h2>
+                  <h2 className="text-2xl font-bold text-text mb-6">Governing Law</h2>
                   <p className="text-text/80">
-                    For questions about these Terms & Conditions, please contact us at:
-                    <br />
-                    Email: legal@makeit3d.com
-                    <br />
-                    Phone: +1 (555) 123-4567
+                    The laws of Karnataka, India, govern these Terms and Your use of the Service.
                   </p>
                 </section>
+
+                <section>
+                  <h2 className="text-2xl font-bold text-text mb-6">Dispute Resolution</h2>
+                  <p className="text-text/80">
+                    If You have any concerns about the Service, You agree to resolve the dispute informally by contacting the Company.
+                  </p>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-bold text-text mb-6">Changes to These Terms</h2>
+                  <p className="text-text/80">
+                    We reserve the right to modify these Terms at any time. By continuing to use Our Service after changes become effective, You agree to be bound by the revised terms.
+                  </p>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-bold text-text mb-6">Contact Us</h2>
+                  <p className="text-text/80">
+                    If you have any questions about these Terms and Conditions, You can contact us:
+                  </p>
+                  <p className="text-text/80">
+                    Email: <a href="mailto:makeit3d9212@gmail.com" className="text-accent underline">makeit3d9212@gmail.com</a>
+                  </p>
+                </section>
+
               </div>
             </div>
           </div>

@@ -34,8 +34,8 @@ export function Contact() {
 
     try {
       const result = await emailjs.send(
-        'service_vut3nw8',
-        'template_8psxr1i',
+        'service_rhol1wl',
+        'template_25wlx85',
         {
           from_name: `${formData.firstName} ${formData.lastName}`,
           from_email: formData.email,
@@ -43,7 +43,7 @@ export function Contact() {
           message: formData.message,
           to_name: 'MakeIt3D Team'
         },
-        'nnJU7kQ6vA7SYdsy-'
+        'jy1feup1ZFBXmwmQs'
       );
 
       if (result.status === 200) {
