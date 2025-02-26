@@ -32,20 +32,18 @@ export function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const templateParams = {
-      from_name: `${formData.firstName} ${formData.lastName}`,
-      from_email: formData.email,
-      subject: formData.subject,
-      message: formData.message,
-      to_name: 'MakeIt3D Team'
-    };
-
     try {
       const result = await emailjs.send(
-        'service_si4zbq4',
-        'template_25wlx85',
-        templateParams,
-        'jy1feup1ZFBXmwmQs'
+        'service_vut3nw8',
+        'template_8psxr1i',
+        {
+          from_name: `${formData.firstName} ${formData.lastName}`,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_name: 'MakeIt3D Team'
+        },
+        'nnJU7kQ6vA7SYdsy-'
       );
 
       if (result.status === 200) {
