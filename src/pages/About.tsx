@@ -243,15 +243,19 @@ export function About() {
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.9694498394388!2d77.55401557159733!3d12.996126343077202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d8ed3544e23%3A0xe0911aa3b7b3689b!2s39%2C%2019%2F39%2C%203rd%20Cross%20Rd%2C%20Mariappanapalya%2C%20Rajajinagar%2C%20Bengaluru%2C%20Karnataka%20560021!5e0!3m2!1sen!2sin!4v1736818971481!5m2!1sen!2sin"
-                width="100%"
-                height="450"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+              <div className="mapouter w-full">
+                <div className="gmap_canvas w-full">
+                  <iframe 
+                    className="gmap_iframe w-full h-[450px]" 
+                    frameBorder="0" 
+                    scrolling="no" 
+                    marginHeight={0} 
+                    marginWidth={0} 
+                    src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=makeit3d &amp;t=k&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                    title="MakeIt3D Location"
+                  ></iframe>
+                </div>
+              </div>
             </motion.div>
             <motion.div className="space-y-6" variants={itemVariants}>
               <h3 className="text-2xl font-semibold text-text">Our Location</h3>
