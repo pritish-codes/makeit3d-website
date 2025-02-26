@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Navbar } from '../../components/Navbar';
 import { Footer } from '../../components/Footer';
 import { Wrench, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function ReverseEngineering() {
   return (
@@ -134,13 +135,17 @@ export function ReverseEngineering() {
             <p className="text-text/80 mb-8 max-w-2xl mx-auto">
               Unlock the full potential of your designs with Makeit3D's reverse engineering services. Contact us to discuss your project and discover how we can help you achieve your goals.
             </p>
-            <motion.button
-              className="inline-flex items-center px-8 py-4 bg-gold text-accent rounded-lg transition-all duration-300 hover:scale-105"
+            <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Contact Us <ArrowRight className="ml-2 h-5 w-5" />
-            </motion.button>
+              <Link 
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gold text-accent rounded-lg transition-all duration-300"
+              >
+                Contact Us <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </motion.div>
           </div>
         </div>
       </div>

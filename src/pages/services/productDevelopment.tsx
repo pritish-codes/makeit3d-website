@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Navbar } from '../../components/Navbar';
 import { Footer } from '../../components/Footer';
 import { Package, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function ProductDevelopment() {
   return (
@@ -143,13 +144,17 @@ export function ProductDevelopment() {
             <p className="text-text/80 mb-8 max-w-2xl mx-auto">
               At Makeit3D, we are passionate about helping you create innovative products that stand out. Contact us today to begin your product development journey.
             </p>
-            <motion.button
-              className="inline-flex items-center px-8 py-4 bg-gold text-accent rounded-lg transition-all duration-300 hover:scale-105"
+            <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Contact Us <ArrowRight className="ml-2 h-5 w-5" />
-            </motion.button>
+              <Link 
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gold text-accent rounded-lg transition-all duration-300"
+              >
+                Contact Us <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </motion.div>
           </div>
         </div>
       </div>
