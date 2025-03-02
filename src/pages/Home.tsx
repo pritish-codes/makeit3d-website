@@ -5,6 +5,7 @@ import { Footer } from '../components/Footer';
 import { TestimonialSlider } from '../components/Testimonial';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { HeroCarousel } from '../components/HeroCarousel';
 
 export function Home() {
   const navigate = useNavigate();
@@ -119,13 +120,11 @@ export function Home() {
                 </button>
               </div>
             </div>
-            <div className="hidden lg:block relative">
+            <div className="relative block">
               <div className="absolute -inset-4 bg-gradient-to-r from-gold/20 to-primary/20 rounded-2xl blur-2xl" />
-              <img 
-                src="https://images.unsplash.com/photo-1638959684318-68dd903ef878?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                alt="3D printing in action" 
-                className="relative rounded-2xl shadow-2xl w-full object-cover aspect-square ring-1 ring-primary/20"
-              />
+              <div className="relative rounded-2xl shadow-2xl w-full aspect-square md:aspect-square ring-1 ring-primary/20 overflow-hidden">
+                <HeroCarousel />
+              </div>
             </div>
           </div>
         </div>
@@ -244,7 +243,7 @@ export function Home() {
                   </Link>
                 </div>
               </div>
-              <div className="hidden lg:block w-1/3 relative">
+              <div className="md:block w-full md:w-1/3 relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-accent/10 to-gold/10 rounded-2xl blur-2xl" />
                 <img 
                   src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=2070" 
