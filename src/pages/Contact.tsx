@@ -34,8 +34,8 @@ export function Contact() {
 
     try {
       const result = await emailjs.send(
-        'YOUR_SERVICE_ID', // Replace with your new EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your new EmailJS template ID
+        'service_xxxxxxx', // Replace with your EmailJS service ID
+        'template_xxxxxxx', // Replace with your EmailJS template ID
         {
           from_name: `${formData.firstName} ${formData.lastName}`,
           from_email: formData.email,
@@ -43,12 +43,11 @@ export function Contact() {
           message: formData.message,
           to_name: 'MakeIt3D Team'
         },
-        'YOUR_PUBLIC_KEY' // Replace with your new EmailJS public key
+        'public_key_xxxxxxxxxxxxxxx' // Replace with your EmailJS public key
       );
 
       if (result.status === 200) {
-        toast.success('Message sent successfully!');
-        // Reset form
+        toast.success('Message sent successfully! We\'ll get back to you soon.');
         setFormData({
           firstName: '',
           lastName: '',
@@ -58,7 +57,7 @@ export function Contact() {
         });
       }
     } catch (error) {
-      toast.error('Failed to send message. Please try again.');
+      toast.error('Failed to send message. Please try again or contact us directly.');
       console.error('Error sending email:', error);
     } finally {
       setIsSubmitting(false);
