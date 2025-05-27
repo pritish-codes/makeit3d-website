@@ -18,6 +18,8 @@ export function Contact() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    // Initialize EmailJS
+    emailjs.init("jy1feup1ZFBXmwmQs");
   }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -34,8 +36,8 @@ export function Contact() {
 
     try {
       const result = await emailjs.send(
-        'service_xxxxxxx', // Replace with your EmailJS service ID
-        'template_xxxxxxx', // Replace with your EmailJS template ID
+        'service_6wsfrvv',
+        'template_dab8rts',
         {
           from_name: `${formData.firstName} ${formData.lastName}`,
           from_email: formData.email,
@@ -43,7 +45,7 @@ export function Contact() {
           message: formData.message,
           to_name: 'MakeIt3D Team'
         },
-        'public_key_xxxxxxxxxxxxxxx' // Replace with your EmailJS public key
+        'jy1feup1ZFBXmwmQs'
       );
 
       if (result.status === 200) {
