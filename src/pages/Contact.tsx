@@ -34,8 +34,8 @@ export function Contact() {
 
     try {
       const result = await emailjs.send(
-        'service_vut3nw8',
-        'template_8psxr1i',
+        'YOUR_SERVICE_ID', // Replace with your new EmailJS service ID
+        'YOUR_TEMPLATE_ID', // Replace with your new EmailJS template ID
         {
           from_name: `${formData.firstName} ${formData.lastName}`,
           from_email: formData.email,
@@ -43,7 +43,7 @@ export function Contact() {
           message: formData.message,
           to_name: 'MakeIt3D Team'
         },
-        'nnJU7kQ6vA7SYdsy-'
+        'YOUR_PUBLIC_KEY' // Replace with your new EmailJS public key
       );
 
       if (result.status === 200) {
@@ -275,7 +275,7 @@ export function Contact() {
                     id="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="john@example.com"
+                    placeholder="johndoe@example.com"
                     className="w-full px-4 py-3 rounded-lg border border-text/20 bg-secondary focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
                     required
                   />
